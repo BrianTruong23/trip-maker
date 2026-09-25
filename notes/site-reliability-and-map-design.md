@@ -31,7 +31,7 @@
 ### Hotel versus place markers
 
 - Hotels use a rust-colored, squared pin with an `H`.
-- Other locations use violet circular, numbered pins.
+- Other locations use deep-teal circular, numbered pins.
 - The list repeats the same color, shape, and Hotel/Place text labels; the distinction does not depend on color alone.
 - Added a persistent map legend.
 - An itinerary item at the same coordinates as a hotel is merged into the hotel presentation instead of suppressing the hotel marker. This fixes Maverick Suites being shown as an ordinary stop.
@@ -44,11 +44,41 @@
 - The Newbury-area radius is defined by `NEWBURY_CENTER` and `NEWBURY_RADIUS_MILES` in `script.js`.
 - Distance sorting measures each location from the hotel assigned to that day.
 
+## Sunday plan added
+
+- 7:15 a.m.: move from Maverick Suites to The Arcadian Hotel on the Green Line C and leave bags.
+- 8:15 a.m.: breakfast at Tatte, 420 Harvard Street.
+- 9:30 a.m.: browse Brookline Booksmith when it opens.
+- 10:40 a.m.: walk the Riverway at Longwood Avenue Bridge.
+- 11:20 a.m.: visit the Isabella Stewart Gardner Museum and finish with lunch or coffee at Café G.
+- 1:50 p.m.: return to The Arcadian for bags, targeting 2:30 p.m. and preserving a buffer before 3 p.m.
+
+The Sunday filter now has five mapped markers, including the hotel. Transit steps stay in the itinerary data but do not create duplicate map markers.
+
+## Custom trip stops
+
+- The **Add stop** button opens an accessible dialog for a stop name, address/place, day, time, and Place/Hotel type.
+- Address lookup runs only when the form is submitted—there is no autocomplete or background geocoding.
+- The first matching U.S. location is pinned immediately and the active filter switches to its selected day.
+- Custom stops are stored in `localStorage` and restored after refresh on the same browser.
+- Successful address results are cached locally to avoid repeating geocoder requests.
+- A custom stop can be removed from its expanded details panel.
+- Location search uses the public OpenStreetMap Nominatim endpoint. It is configured in one constant so it can be replaced by a proxy or another provider without changing the form logic.
+
+## Map color update
+
+- Changed the interface from warm beige and violet to a cooler coastal blue-green palette.
+- Place markers and route lines now use deep teal; hotel markers remain contrasting coral.
+- The OpenStreetMap tiles use a restrained blue-gray treatment, and failed tiles use a matching cool-toned grid.
+
 ## Verification checklist
 
 - Parse `itinerary-data.json` and run a JavaScript syntax check.
 - Confirm the default Newbury view contains four places and one hotel.
+- Confirm the Sunday view contains four places and The Arcadian Hotel.
 - Confirm Maverick Suites and The Arcadian Hotel both resolve to the hotel marker type.
+- Add a custom place and hotel, refresh, and confirm both remain pinned with the correct marker style.
+- Remove a custom stop and confirm it disappears from the map and local storage.
 - Confirm all filter buttons, list items, zoom controls, fit control, and previous/next controls have accessible names.
 - Check that the zoom label updates after button, wheel, and fitted-view changes.
 - Check desktop framing at 1440 × 900 and the bottom-sheet layout near 390 × 844 when a browser is available.

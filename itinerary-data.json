@@ -7,7 +7,7 @@
     "hours": 26
   },
   "researched": "2026-09-25",
-  "premise": "Back Bay on foot Saturday afternoon, Cambridge and Allston by subway and bus Saturday evening, then the night at Maverick Suites on Newbury Street. Sunday is based at The Arcadian Hotel in Brookline.",
+  "premise": "Back Bay on foot Saturday afternoon, Cambridge and Allston by subway and bus Saturday evening, then the night at Maverick Suites on Newbury Street. Sunday moves to The Arcadian Hotel for a Coolidge Corner breakfast and bookshop, the Riverway, and the Gardner Museum before 3 p.m.",
   "flexibility": "Clock times are a suggested order. Sort the list by time, or by walking distance from Maverick Suites on Saturday and The Arcadian Hotel on Sunday.",
   "days": [
     {
@@ -20,7 +20,7 @@
       "id": "sunday",
       "label": "Sunday",
       "dateHint": "Morning until 3 p.m.",
-      "summary": "Based at The Arcadian Hotel in Brookline. Harvard Pond is no longer on this trip."
+      "summary": "Coolidge Corner breakfast and books, a Riverway walk, then the Gardner Museum and Café G before returning to The Arcadian."
     }
   ],
   "items": [
@@ -485,6 +485,370 @@
         "lng": -71.0826178
       },
       "mapUrl": "https://maps.google.com/?q=245+Newbury+Street+Boston+MA"
+    },
+    {
+      "id": "sunday-hotel-transfer",
+      "kind": "transit",
+      "day": "sunday",
+      "start": "7:15 a.m.",
+      "end": "7:45 a.m.",
+      "durationMinutes": 30,
+      "durationFlex": "25–40 min",
+      "title": "Move to The Arcadian Hotel",
+      "summary": "Copley to St. Paul Street on the Green Line C, then leave bags at the Sunday hotel.",
+      "description": "Walk from Maverick Suites to Copley station. Take a Green Line C train outbound toward Cleveland Circle and get off at St. Paul Street. The Arcadian Hotel is at 1200 Beacon Street, a short walk from the stop. Leave bags before breakfast so the rest of Sunday stays hands-free.",
+      "transit": {
+        "mode": "Subway and walk",
+        "from": "Maverick Suites, 245 Newbury Street",
+        "to": "The Arcadian Hotel, 1200 Beacon Street",
+        "line": "Green Line C outbound: Copley to St. Paul Street",
+        "minutes": "About 25–40 minutes including both walks",
+        "fare": "Standard subway fare",
+        "note": "Confirm early bag storage with the hotel if the room is not yet available."
+      },
+      "sources": [
+        {
+          "label": "The Arcadian Hotel address",
+          "url": "https://www.arcadianhotel.com/"
+        }
+      ]
+    },
+    {
+      "id": "sunday-arcadian-start",
+      "kind": "rest",
+      "day": "sunday",
+      "start": "7:45 a.m.",
+      "end": "8:00 a.m.",
+      "durationMinutes": 15,
+      "durationFlex": "10–25 min",
+      "title": "Start Sunday at The Arcadian Hotel",
+      "neighborhood": "Coolidge Corner",
+      "address": "1200 Beacon Street, Brookline, MA 02446",
+      "kicker": "Sunday base",
+      "summary": "Drop bags, reset, and begin a compact Brookline-to-Fenway morning.",
+      "description": "The Arcadian is the Sunday base. Leave bags here, then follow a mostly walkable route through Coolidge Corner and the Riverway to the Gardner Museum. The schedule leaves time to return for luggage before the 3 p.m. finish.",
+      "highlights": [
+        "St. Paul Street station is close to the hotel",
+        "The route returns here around 2:30 p.m.",
+        "Sunday distance labels are measured from this hotel"
+      ],
+      "hours": "Confirm early bag storage and final checkout details directly with the hotel.",
+      "visit": "About 15 minutes before breakfast, then return near the end of the itinerary.",
+      "nearby": [
+        "Beacon Street and the Green Line C",
+        "Coolidge Corner shops and cafes",
+        "The Riverway and Longwood are east of the hotel"
+      ],
+      "sources": [
+        {
+          "label": "The Arcadian Hotel official site",
+          "url": "https://www.arcadianhotel.com/"
+        }
+      ],
+      "location": {
+        "lat": 42.344016,
+        "lng": -71.11604
+      },
+      "mapUrl": "https://maps.google.com/?q=1200+Beacon+Street+Brookline+MA"
+    },
+    {
+      "id": "walk-tatte",
+      "kind": "transit",
+      "day": "sunday",
+      "start": "8:00 a.m.",
+      "end": "8:15 a.m.",
+      "durationMinutes": 15,
+      "durationFlex": "12–20 min",
+      "title": "Walk to Tatte",
+      "summary": "Follow Beacon Street toward Coolidge Corner, then turn onto Harvard Street.",
+      "description": "The walk is roughly two-thirds of a mile. It is early enough for a quieter Beacon Street and puts breakfast close to the next bookshop stop.",
+      "transit": {
+        "mode": "Walk",
+        "from": "The Arcadian Hotel",
+        "to": "Tatte Bakery & Cafe, 420 Harvard Street",
+        "line": "Beacon Street and Harvard Street",
+        "minutes": "About 12–20 minutes",
+        "fare": "Free",
+        "note": "The route is also easy to shorten with a quick rideshare if luggage drop-off runs late."
+      },
+      "sources": [
+        {
+          "label": "Tatte Coolidge Corner address",
+          "url": "https://tattebakery.com/locations/ma/brookline/420-harvard-st/"
+        }
+      ]
+    },
+    {
+      "id": "tatte-coolidge",
+      "kind": "place",
+      "day": "sunday",
+      "start": "8:15 a.m.",
+      "end": "9:15 a.m.",
+      "durationMinutes": 60,
+      "durationFlex": "45–75 min",
+      "title": "Tatte Bakery & Cafe",
+      "neighborhood": "Coolidge Corner / JFK Crossing",
+      "address": "420 Harvard Street, Brookline, MA 02446",
+      "kicker": "Breakfast",
+      "summary": "Coffee, pastries, or a full breakfast before the neighborhood shops open.",
+      "description": "Tatte opens early on Sunday, making it a reliable first stop. Keep breakfast to about an hour so you reach Brookline Booksmith just after its 9:30 opening. The cafe serves pastries, brunch plates, and coffee, so this can be quick or substantial.",
+      "highlights": [
+        "Sunday opening at 7:30 a.m.",
+        "Pastries, breakfast plates, and coffee",
+        "A short walk down Harvard Street to Brookline Booksmith"
+      ],
+      "hours": "Sunday 7:30 a.m.–7:00 p.m.",
+      "visit": "45–75 minutes. This plan uses one hour.",
+      "nearby": [
+        "JFK Crossing",
+        "Coolidge Corner",
+        "Brookline Booksmith on Harvard Street"
+      ],
+      "mapUrl": "https://maps.google.com/?q=420+Harvard+Street+Brookline+MA",
+      "sources": [
+        {
+          "label": "Tatte Coolidge Corner hours and address",
+          "url": "https://tattebakery.com/locations/ma/brookline/420-harvard-st/"
+        }
+      ],
+      "location": {
+        "lat": 42.3453804,
+        "lng": -71.1275255
+      }
+    },
+    {
+      "id": "walk-booksmith",
+      "kind": "transit",
+      "day": "sunday",
+      "start": "9:15 a.m.",
+      "end": "9:30 a.m.",
+      "durationMinutes": 15,
+      "durationFlex": "10–18 min",
+      "title": "Walk to Brookline Booksmith",
+      "summary": "Continue south on Harvard Street and arrive as the doors open.",
+      "description": "Tatte and Brookline Booksmith are on the same street. The timing is deliberate: the bookshop opens at 9:30 on Sunday.",
+      "transit": {
+        "mode": "Walk",
+        "from": "420 Harvard Street",
+        "to": "279 Harvard Street",
+        "line": "Harvard Street",
+        "minutes": "About 10–15 minutes",
+        "fare": "Free",
+        "note": "The storefront is in the center of Coolidge Corner."
+      },
+      "sources": [
+        {
+          "label": "Brookline Booksmith address and Sunday opening",
+          "url": "https://brooklinebooksmith.com/"
+        }
+      ]
+    },
+    {
+      "id": "brookline-booksmith",
+      "kind": "place",
+      "day": "sunday",
+      "start": "9:30 a.m.",
+      "end": "10:15 a.m.",
+      "durationMinutes": 45,
+      "durationFlex": "30–60 min",
+      "title": "Brookline Booksmith",
+      "neighborhood": "Coolidge Corner",
+      "address": "279 Harvard Street, Brookline, MA 02446",
+      "kicker": "Sunday browse",
+      "summary": "An independent bookstore stop that echoes Saturday’s Trident visit without repeating the cafe experience.",
+      "description": "Browse new books, gifts, and the lower-level used section. Forty-five minutes is enough for a relaxed lap while preserving the outdoor walk and museum time later in the morning.",
+      "highlights": [
+        "Independent bookstore in the center of Coolidge Corner",
+        "Used books downstairs",
+        "Opens at 9:30 a.m. on Sunday"
+      ],
+      "hours": "Sunday 9:30 a.m.–9:00 p.m.",
+      "visit": "30–60 minutes. This plan uses 45 minutes.",
+      "nearby": [
+        "Coolidge Corner Theatre",
+        "Beacon Street and the Green Line C",
+        "The Riverway, about a 20-minute walk east"
+      ],
+      "mapUrl": "https://maps.google.com/?q=279+Harvard+Street+Brookline+MA",
+      "sources": [
+        {
+          "label": "Brookline Booksmith address and hours",
+          "url": "https://brooklinebooksmith.com/"
+        }
+      ],
+      "location": {
+        "lat": 42.3426571,
+        "lng": -71.1217394
+      }
+    },
+    {
+      "id": "walk-riverway",
+      "kind": "transit",
+      "day": "sunday",
+      "start": "10:15 a.m.",
+      "end": "10:40 a.m.",
+      "durationMinutes": 25,
+      "durationFlex": "20–30 min",
+      "title": "Walk to the Riverway",
+      "summary": "Head east from Coolidge Corner toward the Longwood Avenue Bridge and the Muddy River paths.",
+      "description": "This is the transition from neighborhood storefronts to the Emerald Necklace. Enter near the Longwood Avenue Bridge and keep the river on your left as you continue toward the Fenway side.",
+      "transit": {
+        "mode": "Walk",
+        "from": "Brookline Booksmith",
+        "to": "Longwood Avenue Bridge, The Riverway",
+        "line": "Harvard Street, Longwood Avenue, and the Riverway paths",
+        "minutes": "About 20–30 minutes",
+        "fare": "Free",
+        "note": "Use marked crossings near the bridge; Brookline Avenue and the Riverway carry traffic."
+      },
+      "sources": [
+        {
+          "label": "Riverway directions and transit",
+          "url": "https://www.emeraldnecklace.org/contact/directions-the-riverway/"
+        }
+      ]
+    },
+    {
+      "id": "riverway-longwood",
+      "kind": "place",
+      "day": "sunday",
+      "start": "10:40 a.m.",
+      "end": "11:05 a.m.",
+      "durationMinutes": 25,
+      "durationFlex": "20–40 min",
+      "title": "The Riverway at Longwood Avenue",
+      "neighborhood": "Longwood / Brookline",
+      "address": "Longwood Avenue Bridge, Brookline, MA",
+      "kicker": "Emerald Necklace",
+      "summary": "A short wooded walk along the Muddy River and one of the Riverway’s historic stone bridges.",
+      "description": "The Riverway is a little over a mile long, but this itinerary uses only the northern stretch around Longwood Avenue. Walk the shaded paths, look back at the granite bridge, then continue toward Evans Way and the Gardner Museum.",
+      "highlights": [
+        "Muddy River paths and landscaped banks",
+        "The 1896 Longwood Avenue Bridge",
+        "A free outdoor counterpoint to the museum"
+      ],
+      "hours": "Dawn to dusk.",
+      "visit": "20–40 minutes within this compact itinerary.",
+      "nearby": [
+        "Longwood Medical Area",
+        "The Gardner Museum, about a 15-minute walk",
+        "Green Line D at Longwood"
+      ],
+      "mapUrl": "https://maps.google.com/?q=Longwood+Avenue+Bridge+Brookline+MA",
+      "sources": [
+        {
+          "label": "Emerald Necklace Conservancy: The Riverway",
+          "url": "https://www.emeraldnecklace.org/parks/the-riverway"
+        },
+        {
+          "label": "Longwood Avenue Bridge details and hours",
+          "url": "https://www.emeraldnecklace.org/poi/longwood-avenue-bridge"
+        }
+      ],
+      "location": {
+        "lat": 42.340525,
+        "lng": -71.110561
+      }
+    },
+    {
+      "id": "walk-gardner",
+      "kind": "transit",
+      "day": "sunday",
+      "start": "11:05 a.m.",
+      "end": "11:20 a.m.",
+      "durationMinutes": 15,
+      "durationFlex": "12–20 min",
+      "title": "Walk to the Gardner Museum",
+      "summary": "Continue east through Longwood to the entrance at 25 Evans Way.",
+      "description": "The museum is close enough to keep this as a walking day. Aim for an 11:30 timed ticket and arrive only a few minutes before the entry window.",
+      "transit": {
+        "mode": "Walk",
+        "from": "Longwood Avenue Bridge",
+        "to": "25 Evans Way",
+        "line": "Longwood and Evans Way",
+        "minutes": "About 12–20 minutes",
+        "fare": "Free",
+        "note": "Reserve the museum time before the trip; popular entry slots can sell out."
+      },
+      "sources": [
+        {
+          "label": "Gardner Museum directions",
+          "url": "https://www.gardnermuseum.org/visit/directions-and-parking"
+        }
+      ]
+    },
+    {
+      "id": "gardner-museum",
+      "kind": "place",
+      "day": "sunday",
+      "start": "11:20 a.m.",
+      "end": "1:50 p.m.",
+      "durationMinutes": 150,
+      "durationFlex": "120–165 min",
+      "title": "Isabella Stewart Gardner Museum + Café G",
+      "neighborhood": "Fenway / Longwood",
+      "address": "25 Evans Way, Boston, MA 02115",
+      "kicker": "Museum and lunch",
+      "summary": "Two hours in the galleries and courtyard, followed by a light lunch or coffee at Café G.",
+      "description": "Reserve an 11:30 timed ticket; Sunday entry can sell out. Begin in the courtyard and historic palace, then use the final 35–45 minutes for Café G. The cafe opens at 11 and accepts walk-ins, so it works as the last meal before returning to the hotel.",
+      "highlights": [
+        "The central courtyard and Venetian-style palace",
+        "Historic galleries plus the Renzo Piano wing",
+        "Café G for lunch without adding another travel leg"
+      ],
+      "hours": "Museum Sunday 10:00 a.m.–5:00 p.m. Café G Sunday 11:00 a.m.–4:00 p.m. Timed museum tickets are recommended.",
+      "visit": "About two hours for art, plus 35–45 minutes at Café G.",
+      "nearby": [
+        "Museum of Fine Arts",
+        "Evans Way Park",
+        "Green Line E at Longwood Medical Area"
+      ],
+      "mapUrl": "https://maps.google.com/?q=25+Evans+Way+Boston+MA",
+      "sources": [
+        {
+          "label": "Gardner Museum Sunday hours, admission, and timed tickets",
+          "url": "https://www.gardnermuseum.org/visit"
+        },
+        {
+          "label": "Café G Sunday hours and walk-in policy",
+          "url": "https://www.gardnermuseum.org/visit/cafe"
+        }
+      ],
+      "location": {
+        "lat": 42.338245,
+        "lng": -71.0991538
+      }
+    },
+    {
+      "id": "return-arcadian",
+      "kind": "transit",
+      "day": "sunday",
+      "start": "1:50 p.m.",
+      "end": "2:30 p.m.",
+      "durationMinutes": 40,
+      "durationFlex": "25–45 min",
+      "title": "Return to The Arcadian",
+      "summary": "Walk back through Longwood and collect bags with a half-hour buffer before 3 p.m.",
+      "description": "The direct walk is roughly one mile. If the museum or Café G runs long, use a rideshare so the itinerary still ends at The Arcadian before 3 p.m.",
+      "transit": {
+        "mode": "Walk or short rideshare",
+        "from": "Isabella Stewart Gardner Museum",
+        "to": "The Arcadian Hotel",
+        "line": "Longwood and Beacon Street",
+        "minutes": "About 25–40 minutes on foot; shorter by car",
+        "fare": "Free on foot",
+        "note": "The 2:30 target leaves a 30-minute buffer for luggage and departure."
+      },
+      "sources": [
+        {
+          "label": "Gardner Museum address and public transportation",
+          "url": "https://www.gardnermuseum.org/visit/directions-and-parking"
+        },
+        {
+          "label": "The Arcadian Hotel address",
+          "url": "https://www.arcadianhotel.com/"
+        }
+      ]
     }
   ],
   "hotels": [

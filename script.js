@@ -7,11 +7,18 @@ const zoomInButton = document.querySelector("#zoom-in");
 const zoomOutButton = document.querySelector("#zoom-out");
 const scrubLabel = document.querySelector("#scrub-label");
 const resetViewButton = document.querySelector("#reset-view");
+const stopDialog = document.querySelector("#stop-dialog");
+const stopForm = document.querySelector("#stop-form");
+const formStatus = document.querySelector("#form-status");
+const openStopFormButton = document.querySelector("#open-stop-form");
 
 const NEWBURY_CENTER = { lat: 42.3508, lng: -71.0806 };
 const NEWBURY_RADIUS_MILES = 0.9;
 const HOTEL_MATCH_MILES = 0.05;
 const FOCUS_ZOOM = 16;
+const CUSTOM_STOPS_KEY = "trip-maker-custom-stops-v1";
+const GEOCODE_CACHE_KEY = "trip-maker-geocode-cache-v1";
+const GEOCODER_URL = "https://nominatim.openstreetmap.org/search";
 
 let data;
 let scope = "newbury";
@@ -22,6 +29,7 @@ let map = null;
 let markers = [];
 let line = null;
 let resizeObserver = null;
+let customStops = loadCustomStops();
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -30,6 +38,53 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+
+function readLocalJson(key, fallback) {
+  try {
+    const value = window.localStorage?.getItem(key);
+    return value ? JSON.parse(value) : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function writeLocalJson(key, value) {
+  try {
+    if (!window.localStorage) return false;
+    window.localStorage.setItem(key, JSON.stringify(value));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function loadCustomStops() {
+  const saved = readLocalJson(CUSTOM_STOPS_KEY, []);
+  if (!Array.isArray(saved)) return [];
+  return saved
+    .filter((stop) => {
+      const lat = Number(stop?.location?.lat);
+      const lng = Number(stop?.location?.lng);
+      return stop?.custom === true
+        && typeof stop.id === "string"
+        && typeof stop.title === "string"
+        && Number.isFinite(lat)
+        && Number.isFinite(lng);
+    })
+    .map((stop) => ({
+      ...stop,
+      location: { lat: Number(stop.location.lat), lng: Number(stop.location.lng) }
+    }));
+}
+
+function timeSortValue(item) {
+  const dayOffset = item.day === "sunday" ? 24 * 60 : 0;
+  const match = String(item.start || "").match(/^(\d{1,2}):(\d{2})\s*([ap])\.m\.$/i);
+  if (!match) return dayOffset + (24 * 60) - 1;
+  let hour = Number(match[1]) % 12;
+  if (match[3].toLowerCase() === "p") hour += 12;
+  return dayOffset + (hour * 60) + Number(match[2]);
 }
 
 function milesBetween(a, b) {
@@ -55,9 +110,10 @@ function matchingHotel(item) {
 }
 
 function mappedRows() {
-  const itineraryRows = data.items
+  const itineraryRows = [...data.items, ...customStops]
     .filter((item) => item.location)
     .map((item) => {
+      if (item.custom && item.kind === "hotel") return { ...item, markerKind: "hotel" };
       const hotel = matchingHotel(item);
       if (!hotel) return { ...item, markerKind: "place" };
       return {
@@ -93,7 +149,9 @@ function mappedRows() {
 }
 
 function visibleRows() {
-  return mappedRows().filter(isInScope);
+  return mappedRows()
+    .filter(isInScope)
+    .sort((a, b) => timeSortValue(a) - timeSortValue(b));
 }
 
 function hotelFor(item) {
@@ -155,7 +213,7 @@ function renderList(active) {
       ? "Distance is measured from each day’s hotel base."
       : scope === "newbury"
         ? "Stops within 0.9 miles of the center of Newbury Street."
-        : "Shown in itinerary order, with standalone hotels last."}</p>
+        : "Shown in itinerary order, including custom stops at their selected time."}</p>
     <ul class="stop-list">
       ${rows.map((place) => {
         const hotel = hotelFor(place);
@@ -173,7 +231,7 @@ function renderList(active) {
             <span class="stop-copy">
               <span class="stop-topline">
                 <span class="category ${isHotel ? "category-hotel" : "category-place"}">${isHotel ? "Hotel" : "Place"}</span>
-                <span class="stop-time">${escapeHtml(place.start)}</span>
+                <span class="stop-time">${place.custom ? "Custom · " : ""}${escapeHtml(place.start)}</span>
               </span>
               <strong>${escapeHtml(place.title)}</strong>
               <span class="stop-meta">${escapeHtml(distanceLabel)}</span>
@@ -188,6 +246,7 @@ function renderList(active) {
             ${place.nearby && place.nearby.length ? `<h3>Nearby</h3>${list(place.nearby)}` : ""}
             ${place.sources ? `<h3>Sources</h3><ul>${place.sources.map((source) => `<li><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)}</a></li>`).join("")}</ul>` : ""}
             ${place.mapUrl ? `<p><a class="directions" href="${escapeHtml(place.mapUrl)}" target="_blank" rel="noopener noreferrer">Open directions ↗</a></p>` : ""}
+            ${place.custom ? `<button class="remove-stop" type="button" data-remove="${escapeHtml(place.id)}">Remove custom stop</button>` : ""}
           </div>` : ""}
         </li>`;
       }).join("")}
@@ -234,7 +293,7 @@ function draw() {
   if (itineraryRoute.length > 1) {
     line = L.polyline(
       itineraryRoute.map((place) => [place.location.lat, place.location.lng]),
-      { color: "#7756e8", weight: 4, opacity: 0.72, dashArray: "2 9", lineCap: "round" }
+      { color: "#147d79", weight: 4, opacity: 0.72, dashArray: "2 9", lineCap: "round" }
     ).addTo(map);
   }
 
@@ -313,11 +372,12 @@ function select(id, toggleDetails = false) {
 }
 
 function fallbackTile() {
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><rect width="256" height="256" fill="#e9e7e1"/><path d="M0 64h256M0 128h256M0 192h256M64 0v256M128 0v256M192 0v256" stroke="#d7d3c9" stroke-width="1"/></svg>`;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><rect width="256" height="256" fill="#dcebed"/><path d="M0 64h256M0 128h256M0 192h256M64 0v256M128 0v256M192 0v256" stroke="#bdd2d6" stroke-width="1"/></svg>`;
   return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
 }
 
 function bootMap() {
+  openStopFormButton.disabled = false;
   renderFilters();
   draw();
   if (typeof L === "undefined") {
@@ -384,6 +444,18 @@ dayFilters.addEventListener("click", (event) => {
 });
 
 cardEl.addEventListener("click", (event) => {
+  const remove = event.target.closest("[data-remove]");
+  if (remove) {
+    const stop = customStops.find((item) => item.id === remove.dataset.remove);
+    if (!stop || !window.confirm(`Remove ${stop.title} from this trip?`)) return;
+    customStops = customStops.filter((item) => item.id !== stop.id);
+    writeLocalJson(CUSTOM_STOPS_KEY, customStops);
+    openId = null;
+    index = 0;
+    draw();
+    fitVisible();
+    return;
+  }
   const sort = event.target.closest("[data-sort]");
   if (sort) {
     sortMode = sort.dataset.sort;
@@ -403,6 +475,121 @@ function selectAdjacent(delta) {
   draw();
   focus(rows[index]);
 }
+
+function formatFormTime(value) {
+  const [hoursText, minutes = "00"] = String(value).split(":");
+  const hours = Number(hoursText);
+  if (!Number.isFinite(hours)) return "Flexible";
+  const suffix = hours >= 12 ? "p.m." : "a.m.";
+  const displayHour = hours % 12 || 12;
+  return `${displayHour}:${minutes} ${suffix}`;
+}
+
+async function geocodeAddress(address) {
+  const cache = readLocalJson(GEOCODE_CACHE_KEY, {});
+  const cacheKey = address.trim().toLowerCase();
+  if (cache[cacheKey]) return cache[cacheKey];
+
+  const params = new URLSearchParams({
+    q: address,
+    format: "jsonv2",
+    limit: "1",
+    countrycodes: "us"
+  });
+  const response = await fetch(`${GEOCODER_URL}?${params}`, {
+    headers: { Accept: "application/json" }
+  });
+  if (!response.ok) throw new Error("Location search is temporarily unavailable.");
+  const results = await response.json();
+  if (!Array.isArray(results) || !results.length) {
+    throw new Error("No matching location was found. Try a more complete address.");
+  }
+
+  const result = {
+    lat: Number(results[0].lat),
+    lng: Number(results[0].lon),
+    displayName: results[0].display_name || address
+  };
+  if (!Number.isFinite(result.lat) || !Number.isFinite(result.lng)) {
+    throw new Error("The location result did not include usable map coordinates.");
+  }
+  cache[cacheKey] = result;
+  writeLocalJson(GEOCODE_CACHE_KEY, cache);
+  return result;
+}
+
+function closeStopDialog() {
+  if (stopDialog.open) stopDialog.close();
+  formStatus.textContent = "";
+}
+
+openStopFormButton.addEventListener("click", () => {
+  formStatus.textContent = "";
+  stopDialog.showModal();
+  stopForm.elements.title.focus();
+});
+
+document.querySelector("#close-stop-form").addEventListener("click", closeStopDialog);
+document.querySelector("#cancel-stop-form").addEventListener("click", closeStopDialog);
+stopDialog.addEventListener("click", (event) => {
+  if (event.target === stopDialog) closeStopDialog();
+});
+
+stopForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const submitButton = stopForm.querySelector('[type="submit"]');
+  const formData = new FormData(stopForm);
+  const title = String(formData.get("title") || "").trim();
+  const address = String(formData.get("address") || "").trim();
+  const day = formData.get("day") === "sunday" ? "sunday" : "saturday";
+  const kind = formData.get("kind") === "hotel" ? "hotel" : "place";
+
+  submitButton.disabled = true;
+  formStatus.textContent = "Finding that location…";
+  formStatus.dataset.state = "loading";
+
+  try {
+    const result = await geocodeAddress(address);
+    const idSuffix = window.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+    const stop = {
+      id: `custom-${idSuffix}`,
+      kind,
+      custom: true,
+      day,
+      start: formatFormTime(formData.get("time")),
+      end: "",
+      durationFlex: "Custom stop",
+      title,
+      address: result.displayName,
+      summary: `A custom ${kind} added to your ${day} trip.`,
+      description: `Pinned from the address “${address}”. This stop is stored only in this browser.`,
+      location: { lat: result.lat, lng: result.lng },
+      mapUrl: `https://maps.google.com/?q=${encodeURIComponent(result.displayName)}`,
+      sources: [{
+        label: "Location data © OpenStreetMap contributors",
+        url: "https://www.openstreetmap.org/copyright"
+      }]
+    };
+
+    customStops.push(stop);
+    const saved = writeLocalJson(CUSTOM_STOPS_KEY, customStops);
+    scope = day;
+    openId = stop.id;
+    renderFilters();
+    index = visibleRows().findIndex((row) => row.id === stop.id);
+    draw();
+    focus(stop);
+    stopForm.reset();
+    stopForm.elements.time.value = "09:00";
+    closeStopDialog();
+    if (!saved) setStatus("The stop is pinned for this session but could not be saved on this device.", "warning");
+  } catch (error) {
+    formStatus.textContent = error.message || "Could not add this stop.";
+    formStatus.dataset.state = "error";
+  } finally {
+    submitButton.disabled = false;
+  }
+});
 
 document.querySelector("#prev").addEventListener("click", () => selectAdjacent(-1));
 document.querySelector("#next").addEventListener("click", () => selectAdjacent(1));

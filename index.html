@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Twenty-six hours in Boston</title>
-  <meta name="description" content="A readable, interactive map of Newbury Street hotels and places within a 26-hour Boston itinerary.">
+  <meta name="description" content="A readable Boston weekend trip planner with mapped hotels, Sunday stops, and custom location pinning.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -16,9 +16,12 @@
     <div class="brand">
       <p class="eyebrow">A walkable Boston weekend</p>
       <h1>Twenty-six hours in Boston</h1>
-      <p class="subtitle">Find the Newbury Street stops first, then follow the full route.</p>
+      <p class="subtitle">Newbury Street on Saturday, Brookline and Fenway on Sunday—plus your own pinned stops.</p>
     </div>
-    <nav class="days" id="day-filters" aria-label="Filter map locations"></nav>
+    <div class="topbar-actions">
+      <nav class="days" id="day-filters" aria-label="Filter map locations"></nav>
+      <button class="add-stop-button" type="button" id="open-stop-form" disabled>+ Add stop</button>
+    </div>
   </header>
 
   <main class="stage">
@@ -49,6 +52,62 @@
       </div>
     </div>
   </main>
+
+  <dialog class="stop-dialog" id="stop-dialog" aria-labelledby="stop-dialog-title">
+    <form class="stop-form" id="stop-form">
+      <div class="dialog-head">
+        <div>
+          <p class="panel-kicker">Build your trip</p>
+          <h2 id="stop-dialog-title">Pin a new stop</h2>
+        </div>
+        <button class="dialog-close" type="button" id="close-stop-form" aria-label="Close add stop form">×</button>
+      </div>
+
+      <p class="dialog-intro">Add an address and it will be placed on the map and saved on this device.</p>
+
+      <label>
+        <span>Stop name</span>
+        <input name="title" type="text" maxlength="80" placeholder="Museum, cafe, hotel…" autocomplete="off" required>
+      </label>
+
+      <label>
+        <span>U.S. street address or place</span>
+        <input name="address" type="text" maxlength="160" placeholder="25 Evans Way, Boston, MA" autocomplete="street-address" required>
+      </label>
+
+      <div class="form-grid">
+        <label>
+          <span>Day</span>
+          <select name="day">
+            <option value="saturday">Saturday</option>
+            <option value="sunday">Sunday</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Time</span>
+          <input name="time" type="time" value="09:00" required>
+        </label>
+
+        <label>
+          <span>Type</span>
+          <select name="kind">
+            <option value="place">Place</option>
+            <option value="hotel">Hotel</option>
+          </select>
+        </label>
+      </div>
+
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+
+      <div class="form-actions">
+        <button class="secondary-button" type="button" id="cancel-stop-form">Cancel</button>
+        <button class="primary-button" type="submit">Find and pin location</button>
+      </div>
+
+      <p class="geocode-note">Location search uses <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap data</a>. Searches run only when you submit this form.</p>
+    </form>
+  </dialog>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="script.js"></script>
