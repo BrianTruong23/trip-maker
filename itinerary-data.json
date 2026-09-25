@@ -1,0 +1,691 @@
+{
+  "title": "Twenty-six hours in Boston",
+  "subtitle": "A loose Saturday 1 p.m. to Sunday 3 p.m. sequence by train, with room to linger.",
+  "window": {
+    "startLabel": "Saturday 1:00 p.m.",
+    "endLabel": "Sunday 3:00 p.m.",
+    "hours": 26
+  },
+  "researched": "2026-09-25",
+  "premise": "Back Bay on foot Saturday afternoon, Cambridge and Allston by subway and bus Saturday evening, then Harvard Pond on Sunday. The pond is in Petersham, about 70 miles west of Boston. The train ends at Wachusett; the last miles are a rideshare.",
+  "flexibility": "Clock times are a suggested order, not a reservation. Each stop has a flexible duration. Swap Harvard Square into Sunday daylight and shorten the pond walk if you would rather see the square while shops are open.",
+  "days": [
+    {
+      "id": "saturday",
+      "label": "Saturday",
+      "dateHint": "Afternoon into night",
+      "summary": "Bookstore lunch, Newbury Street, matcha, the Common, then Harvard Square and HEYTEA."
+    },
+    {
+      "id": "sunday",
+      "label": "Sunday",
+      "dateHint": "Morning until 3 p.m.",
+      "summary": "Fitchburg Line to Wachusett, a short rideshare to Harvard Pond, and a train back before 3."
+    }
+  ],
+  "items": [
+    {
+      "id": "trident",
+      "kind": "place",
+      "day": "saturday",
+      "start": "1:00 p.m.",
+      "end": "3:00 p.m.",
+      "durationMinutes": 120,
+      "durationFlex": "75–150 min",
+      "title": "Trident Booksellers & Cafe",
+      "neighborhood": "Back Bay",
+      "address": "338 Newbury Street, Boston, MA 02115",
+      "kicker": "Start here",
+      "summary": "Lunch and a long browse in the indie bookstore-cafe at the Mass Ave end of Newbury.",
+      "description": "Trident has been a Back Bay bookstore and full-service cafe since 1984. The room is half restaurant, half shelves: all-day breakfast, lunch, and dinner, plus magazines, cards, and a deep book floor. Saturday midday is one of the busiest times, so treat 1 p.m. as a landing and let the table run long. If the room is loud, the visit still works as a shorter meal plus a lap of the shelves.",
+      "highlights": [
+        "Two floors of books inside a working cafe",
+        "All-day breakfast through dinner",
+        "Quieter if you slide toward mid-afternoon rather than noon brunch"
+      ],
+      "hours": "Daily 8:00 a.m.–10:00 p.m. Closed Thanksgiving and Christmas.",
+      "visit": "A meal and a browse usually lands around 90 minutes. Bookish lingering can stretch past two hours.",
+      "nearby": [
+        "Newbury Street begins outside the door",
+        "Hynes Convention Center station, Green Line, is the closest T stop",
+        "Commonwealth Avenue Mall is one block north"
+      ],
+      "mapUrl": "https://maps.google.com/?q=338+Newbury+Street+Boston+MA",
+      "sources": [
+        {
+          "label": "Trident hours and location",
+          "url": "https://tridentbookscafe.com/hours-location-0"
+        },
+        {
+          "label": "OpenTable: daily 8 a.m.–10 p.m. and weekend rush notes",
+          "url": "https://www.opentable.com/r/trident-booksellers-and-cafe-boston-2"
+        }
+      ]
+    },
+    {
+      "id": "walk-newbury",
+      "kind": "transit",
+      "day": "saturday",
+      "start": "3:00 p.m.",
+      "end": "3:10 p.m.",
+      "durationMinutes": 10,
+      "durationFlex": "8–15 min",
+      "title": "Step onto Newbury and walk east",
+      "summary": "No train. Trident sits between Hereford Street and Massachusetts Avenue, so the rest of the street is a walk toward the Public Garden.",
+      "description": "Head east, toward Arlington Street. Cross streets run alphabetically from Hereford down to Arlington, so it is hard to get lost. The shops get dressier as the address numbers drop.",
+      "transit": {
+        "mode": "Walk",
+        "from": "338 Newbury Street",
+        "to": "Newbury Street, heading toward Arlington Street",
+        "line": "On foot",
+        "minutes": "About 10 minutes before you want to start ducking into shops",
+        "fare": "Free",
+        "note": "Stay on Newbury. Boylston Street is one block south if you want a quieter parallel."
+      },
+      "sources": [
+        {
+          "label": "Trident: closest T is Hynes; block between Hereford and Mass Ave",
+          "url": "https://tridentbookscafe.com/hours-location-0"
+        }
+      ]
+    },
+    {
+      "id": "newbury",
+      "kind": "place",
+      "day": "saturday",
+      "start": "3:10 p.m.",
+      "end": "4:40 p.m.",
+      "durationMinutes": 90,
+      "durationFlex": "45–150 min",
+      "title": "Newbury Street",
+      "neighborhood": "Back Bay",
+      "address": "Newbury Street, Arlington Street to Massachusetts Avenue",
+      "kicker": "Eight blocks",
+      "summary": "A mile of brownstone shops, galleries, and sidewalk tables, walked from the casual west end toward the Public Garden.",
+      "description": "The famous stretch is about eight blocks and a mile, from Massachusetts Avenue to Arlington Street at the Public Garden. The west end is the more independent, bohemian side. Closer to Arlington the storefronts turn toward galleries and higher-end fashion. Walking it without stops takes 15–20 minutes. With windows, side streets, and one deliberate shop, give it an hour and a half. Commonwealth Avenue Mall and the Boston Public Library at Copley Square are easy detours if the street feels crowded.",
+      "highlights": [
+        "Victorian brownstones converted into shops and cafes",
+        "Character shifts from eclectic at Mass Ave to polished at Arlington",
+        "Open Newbury Street days sometimes close the road to cars; check the city calendar"
+      ],
+      "hours": "The street itself is always open. Individual shops set their own hours, and many close by early evening.",
+      "visit": "1.5–3 hours if you shop. This plan uses about 90 minutes so the park still gets daylight.",
+      "nearby": [
+        "Boston Public Library and Copley Square, one block south",
+        "Commonwealth Avenue Mall, one block north",
+        "Green Line: Hynes (west end), Copley (middle), Arlington (Public Garden end)"
+      ],
+      "mapUrl": "https://maps.google.com/?q=Newbury+Street+Boston+MA",
+      "sources": [
+        {
+          "label": "Newbury Street, east end at Arlington, west toward Mass Ave",
+          "url": "https://en.wikipedia.org/wiki/Newbury_Street"
+        },
+        {
+          "label": "Visit length and east-to-west shift",
+          "url": "https://www.nomadotravel.app/en/attractions/newbury-street"
+        }
+      ]
+    },
+    {
+      "id": "walk-blank",
+      "kind": "transit",
+      "day": "saturday",
+      "start": "4:40 p.m.",
+      "end": "4:50 p.m.",
+      "durationMinutes": 10,
+      "durationFlex": "8–12 min",
+      "title": "Walk to Blank Street",
+      "summary": "One block south of Newbury, at Boylston and Dartmouth.",
+      "description": "From the Dartmouth Street crossing on Newbury, walk one block south to Boylston Street. Blank Street is on that corner. There is no Newbury Street Blank Street on the current store list; this Back Bay shop is the one that sits on the walk you are already doing.",
+      "transit": {
+        "mode": "Walk",
+        "from": "Newbury Street at Dartmouth",
+        "to": "647 Boylston Street",
+        "line": "On foot",
+        "minutes": "About 5–10 minutes",
+        "fare": "Free",
+        "note": "Copley station (Green Line) is also at this corner if you arrived by train instead."
+      },
+      "sources": [
+        {
+          "label": "Blank Street, Boylston & Dartmouth",
+          "url": "https://www.blankstreet.com/en-US/locations/boston/70-boylston-and-dartmouth-st"
+        }
+      ]
+    },
+    {
+      "id": "blank-street",
+      "kind": "place",
+      "day": "saturday",
+      "start": "4:50 p.m.",
+      "end": "5:25 p.m.",
+      "durationMinutes": 35,
+      "durationFlex": "20–45 min",
+      "title": "Blank Street Coffee",
+      "neighborhood": "Back Bay",
+      "address": "647 Boylston Street, Boston, MA 02116",
+      "kicker": "Matcha",
+      "summary": "A matcha stop at Boylston and Dartmouth, between Newbury and the Public Garden.",
+      "description": "This is the Back Bay Blank Street, a block off the east end of Newbury. Order a matcha — the menu rotates seasonal versions alongside the regular latte — and drink it while you cross into the garden. Seating is limited, so plan on a short stop or a to-go cup. A second Blank Street sits in Harvard Square at 1380 Massachusetts Avenue if you would rather have the matcha there on Saturday evening; that shop is open until 9 p.m. on Saturday.",
+      "highlights": [
+        "Matcha and coffee, built for a short ritual",
+        "Sits between the shopping street and the parks",
+        "Harvard Square shop is the alternate if you want the drink later"
+      ],
+      "hours": "Monday–Saturday 6:30 a.m.–9:00 p.m. Sunday 7:00 a.m.–9:00 p.m.",
+      "visit": "20–40 minutes. The line moves quickly; the linger is optional.",
+      "nearby": [
+        "Public Garden entrance across Arlington Street",
+        "Copley Square and the Boston Public Library",
+        "Newbury Street’s dressier eastern blocks"
+      ],
+      "mapUrl": "https://maps.google.com/?q=647+Boylston+Street+Boston+MA",
+      "sources": [
+        {
+          "label": "Boylston & Dartmouth hours and address",
+          "url": "https://www.blankstreet.com/en-US/locations/boston/70-boylston-and-dartmouth-st"
+        },
+        {
+          "label": "Harvard Square alternate: 1380 Massachusetts Avenue",
+          "url": "https://www.blankstreet.com/en-US/locations/boston/91-massachusetts-and-dunster-st"
+        }
+      ]
+    },
+    {
+      "id": "walk-common",
+      "kind": "transit",
+      "day": "saturday",
+      "start": "5:25 p.m.",
+      "end": "5:40 p.m.",
+      "durationMinutes": 15,
+      "durationFlex": "10–20 min",
+      "title": "Walk into the Public Garden",
+      "summary": "Cross Arlington Street. The garden is the landscaped half; the Common is just beyond Charles Street.",
+      "description": "From Boylston and Dartmouth, walk east to Arlington Street and enter the Public Garden. Cross the lagoon bridge, then Charles Street, and you are on Boston Common. Arlington station is directly across from the garden if you would rather ride the Green Line one stop from Copley.",
+      "transit": {
+        "mode": "Walk",
+        "from": "647 Boylston Street",
+        "to": "Boston Public Garden and Boston Common",
+        "line": "On foot, or Green Line Copley to Arlington",
+        "minutes": "About 10–15 minutes on foot",
+        "fare": "Free on foot. Subway is $2.40",
+        "note": "Park Street and Boylston stations sit on the Common itself if you continue east."
+      },
+      "sources": [
+        {
+          "label": "Friends of the Public Garden: stations and hours",
+          "url": "https://friendsofthepublicgarden.org/our-parks/visit/hours-and-directions/"
+        },
+        {
+          "label": "MBTA subway fare",
+          "url": "https://www.mbta.com/fares/commuter-rail-fares/zones"
+        }
+      ]
+    },
+    {
+      "id": "boston-common",
+      "kind": "place",
+      "day": "saturday",
+      "start": "5:40 p.m.",
+      "end": "7:10 p.m.",
+      "durationMinutes": 90,
+      "durationFlex": "60–120 min",
+      "title": "Boston Common and the Public Garden",
+      "neighborhood": "Downtown / Beacon Hill",
+      "address": "Boston Common, between Tremont, Park, Beacon, and Charles Streets",
+      "kicker": "Golden hour",
+      "summary": "The garden lagoon, then the Common’s lawns, Frog Pond, and the start of the Freedom Trail.",
+      "description": "Do the Public Garden first, while the light is still on the lagoon and the George Washington statue. The Swan Boats run on that lagoon from mid-April through Labor Day; the 2026 season ended September 7, so later in September the ride is a view, not a ticket. Cross Charles Street onto Boston Common, the older and more open park. The visitor center is at 139 Tremont Street, the Freedom Trail’s red line starts between Park Street and Boylston, and the Frog Pond is the seasonal skating and splash landmark. Beacon Hill’s brick streets begin on the north side of the Common if you still have legs.",
+      "highlights": [
+        "Public Garden lagoon and bridge",
+        "Freedom Trail start and the visitor center on Tremont",
+        "Frog Pond, Parkman Bandstand, and a Beacon Hill edge if you want one more walk"
+      ],
+      "hours": "Parks open 6:30 a.m.–11:00 p.m., free, every day. Pedestrian access is 24 hours.",
+      "visit": "45–90 minutes for the highlights. Two hours if you add Beacon Hill.",
+      "nearby": [
+        "Beacon Hill and Charles Street shops and restaurants",
+        "Park Street station (Red and Green Lines) and Boylston (Green Line)",
+        "Arlington station for the garden side"
+      ],
+      "mapUrl": "https://maps.google.com/?q=Boston+Common+MA",
+      "sources": [
+        {
+          "label": "Park hours and T directions",
+          "url": "https://friendsofthepublicgarden.org/our-parks/visit/hours-and-directions/"
+        },
+        {
+          "label": "MBTA: Park Street and Boylston on the Common",
+          "url": "https://www.mbta.com/guides/boston-visitor-guide"
+        },
+        {
+          "label": "Swan Boats 2026 season, April 18–September 7",
+          "url": "https://swanboats.com/plan-your-visit/"
+        }
+      ]
+    },
+    {
+      "id": "red-line-harvard",
+      "kind": "transit",
+      "day": "saturday",
+      "start": "7:15 p.m.",
+      "end": "7:35 p.m.",
+      "durationMinutes": 20,
+      "durationFlex": "15–30 min",
+      "title": "Red Line to Harvard Square",
+      "summary": "Park Street to Harvard, no transfer.",
+      "description": "Walk to Park Street station at Park and Tremont, on the Common. Take the Red Line outbound toward Alewife and get off at Harvard. The ride itself is about 12 minutes. Saturday evening trains are frequent; still check the app if there is a disruption.",
+      "transit": {
+        "mode": "Subway",
+        "from": "Park Street",
+        "to": "Harvard",
+        "line": "Red Line toward Alewife",
+        "minutes": "About 12 minutes on the train, plus walking into the station",
+        "fare": "$2.40 subway fare",
+        "note": "You exit into the square. Follow signs for Harvard Yard or Brattle Street depending on which side you want first."
+      },
+      "sources": [
+        {
+          "label": "Harvard to Park Street is about 12 minutes",
+          "url": "https://www.mbta.com/guides/boston-visitor-guide"
+        },
+        {
+          "label": "Harvard Square via the Red Line",
+          "url": "https://harvardsquare.com/visit-us/"
+        }
+      ]
+    },
+    {
+      "id": "harvard-square",
+      "kind": "place",
+      "day": "saturday",
+      "start": "7:35 p.m.",
+      "end": "9:05 p.m.",
+      "durationMinutes": 90,
+      "durationFlex": "60–150 min",
+      "title": "Harvard Square",
+      "neighborhood": "Cambridge",
+      "address": "Harvard Square, Cambridge, MA 02138",
+      "kicker": "Evening in the square",
+      "summary": "Dinner and a night loop of the square, the Yard gates, and the walk toward the river.",
+      "description": "Harvard Square is the triangle where Massachusetts Avenue, Brattle Street, and JFK Street meet, and it is open around the clock even when the shops are not. Saturday evening still has restaurants, buskers, and people moving through the plaza. Harvard Yard’s gates are beside the station; Massachusetts Hall and the main lawn are worth a slow circuit. If you want daylight browsing — Harvard Book Store, the museums, a longer river walk — move this block to Sunday morning and keep the pond visit short enough to catch the 12:25 p.m. train back. The Harvard Square Blank Street at 1380 Massachusetts Avenue is open until 9 p.m. Saturday if you skipped matcha in Back Bay.",
+      "highlights": [
+        "Out of the station and into the plaza",
+        "Harvard Yard at night, just east of the square",
+        "Dinner on Brattle, JFK, or Mt. Auburn, then a walk toward the Charles if you have time"
+      ],
+      "hours": "The square is always open. Shops and museums keep their own hours and many close by early evening. Restaurants run later.",
+      "visit": "Two hours is a solid daytime visit. This evening block is about 90 minutes, with dinner included. A half-day if you add the museums.",
+      "nearby": [
+        "Harvard Book Store on Massachusetts Avenue",
+        "Blank Street at 1380 Massachusetts Avenue, until 9 p.m. Saturday",
+        "Charles River and JFK Park, a short walk south"
+      ],
+      "mapUrl": "https://maps.google.com/?q=Harvard+Square+Cambridge+MA",
+      "sources": [
+        {
+          "label": "City of Cambridge: Harvard Square",
+          "url": "https://www.cambridgema.gov/CDD/EconomicOpportunityAndDevelopment/aboutcambridge/harvardsq"
+        },
+        {
+          "label": "Harvard Square Business Association: Red Line",
+          "url": "https://harvardsquare.com/visit-us/"
+        },
+        {
+          "label": "About two hours, or half a day with the Yard and museums",
+          "url": "https://www.nomadotravel.app/en/attractions/harvard-square"
+        }
+      ]
+    },
+    {
+      "id": "bus-66",
+      "kind": "transit",
+      "day": "saturday",
+      "start": "9:05 p.m.",
+      "end": "9:35 p.m.",
+      "durationMinutes": 30,
+      "durationFlex": "20–40 min",
+      "title": "Bus 66 to HEYTEA",
+      "summary": "From Harvard Square toward Allston. Get off where the bus meets the Green Line B at Harvard Avenue.",
+      "description": "Route 66 runs between Harvard Square and Nubian and passes Harvard Avenue at Commonwealth Avenue, the Allston stop for HEYTEA. Board toward Nubian, not toward Harvard. The ride is often about 20–30 minutes; Saturday night traffic on North Harvard Street can add time. If the bus is slow, the fallback is the Red Line back to Park Street and the Green Line B out to Harvard Ave, which is longer.",
+      "transit": {
+        "mode": "Bus",
+        "from": "Harvard Square",
+        "to": "Harvard Avenue at Commonwealth Avenue",
+        "line": "Route 66 toward Nubian",
+        "minutes": "About 20–30 minutes",
+        "fare": "Bus fare, often covered by a recent contactless subway tap. Confirm in the MBTA app.",
+        "note": "HEYTEA is a short walk from that stop, at 162 Harvard Avenue. The Green Line B Harvard Ave station is on the same corner for the ride home."
+      },
+      "sources": [
+        {
+          "label": "Route 66 connects Harvard Square to Harvard Ave at Commonwealth",
+          "url": "https://cdn.mbta.com/sites/default/files/projects/betterbus/route-profiles/66.pdf"
+        }
+      ]
+    },
+    {
+      "id": "heytea",
+      "kind": "place",
+      "day": "saturday",
+      "start": "9:35 p.m.",
+      "end": "10:10 p.m.",
+      "durationMinutes": 35,
+      "durationFlex": "20–45 min",
+      "title": "HEYTEA Allston",
+      "neighborhood": "Allston",
+      "address": "162 Harvard Avenue, Allston, MA 02134",
+      "kicker": "Last seating is standing",
+      "summary": "A to-go fruit tea or matcha on Harvard Avenue, before the shop closes at 10.",
+      "description": "Boston’s HEYTEA is on Harvard Avenue in Allston, not in Harvard Square. Drinks are made to order — fruit tea, milk tea, and matcha, often with a cheese or cloud foam — so a line can take a while even late. The shop is small and is generally a takeaway stop, with little or no seating. Arrive before 9:45 if you want a cushion before the 10 p.m. close. Drink it on the walk to the Green Line.",
+      "highlights": [
+        "Fresh fruit teas and matcha, customizable sugar and ice",
+        "Green Line B is on the corner for the trip back",
+        "Allston Village storefronts along Harvard Avenue if anything is still open"
+      ],
+      "hours": "Daily 11:30 a.m.–10:00 p.m.",
+      "visit": "20–40 minutes, mostly the line and the walk away with the cup.",
+      "nearby": [
+        "Green Line B, Harvard Avenue station",
+        "Bus 66 back toward Harvard Square or on toward Brookline",
+        "Allston’s Harvard Avenue restaurants, earlier in the evening"
+      ],
+      "mapUrl": "https://maps.google.com/?q=162+Harvard+Avenue+Allston+MA",
+      "sources": [
+        {
+          "label": "HEYTEA Allston opening, 162 Harvard Avenue",
+          "url": "https://www.nbcboston.com/news/local/popular-chain-of-tea-shops-with-roots-in-china-opens-first-boston-location/3614802/"
+        },
+        {
+          "label": "Hours: daily 11:30 a.m.–10 p.m., takeaway-style shop",
+          "url": "https://www.restaurantji.com/ma/allston/heytea-allston-/"
+        }
+      ]
+    },
+    {
+      "id": "green-line-home",
+      "kind": "transit",
+      "day": "saturday",
+      "start": "10:10 p.m.",
+      "end": "10:40 p.m.",
+      "durationMinutes": 30,
+      "durationFlex": "25–40 min",
+      "title": "Green Line B back toward Back Bay",
+      "summary": "Harvard Ave inbound to Hynes, Copley, or Park Street, depending on where you are sleeping.",
+      "description": "Board the Green Line B inbound (toward Government Center). Hynes is the stop for the Mass Ave end of Newbury. Copley and Arlington cover the garden end. Park Street returns you to the Common. If you are staying near North Station for tomorrow’s train, stay on through Park Street and change, or ride to Government Center and walk. An Orange Line ride from Back Bay station to North Station in the morning is simpler if your hotel is in Back Bay.",
+      "transit": {
+        "mode": "Subway",
+        "from": "Harvard Avenue",
+        "to": "Hynes, Copley, Arlington, or Park Street",
+        "line": "Green Line B inbound",
+        "minutes": "About 20–30 minutes to the Back Bay stops",
+        "fare": "$2.40",
+        "note": "Last trains leave the downtown end around 12:40 a.m. Confirm the night schedule in the MBTA app."
+      },
+      "sources": [
+        {
+          "label": "MBTA visitor guide and Green Line",
+          "url": "https://www.mbta.com/guides/boston-visitor-guide"
+        }
+      ]
+    },
+    {
+      "id": "overnight",
+      "kind": "rest",
+      "day": "saturday",
+      "start": "10:45 p.m.",
+      "end": "7:15 a.m.",
+      "durationMinutes": 510,
+      "durationFlex": "As long as you need",
+      "title": "Overnight",
+      "neighborhood": "Wherever you are staying",
+      "summary": "The middle of the 26 hours. Sleep, then aim for North Station in the morning.",
+      "description": "Nothing is scheduled here on purpose. If tomorrow’s pond trip is the plan, stay somewhere with an easy morning path to North Station. From Back Bay station the Orange Line runs straight to North Station in about 10 minutes. From Park Street, walk or take the Green Line north to Government Center and continue to North Station.",
+      "highlights": [
+        "Orange Line Back Bay to North Station is the clean morning move",
+        "Buy the $10 Commuter Rail weekend pass before you board"
+      ],
+      "hours": "Off the clock.",
+      "visit": "Roughly eight hours, and it can shrink if you want a slower Saturday night.",
+      "nearby": [],
+      "sources": [
+        {
+          "label": "$10 weekend pass, all zones, Saturday and Sunday",
+          "url": "https://www.mbta.com/fares/10-commuter-rail-weekend-and-holiday-passes"
+        }
+      ]
+    },
+    {
+      "id": "to-north-station",
+      "kind": "transit",
+      "day": "sunday",
+      "start": "7:20 a.m.",
+      "end": "7:50 a.m.",
+      "durationMinutes": 30,
+      "durationFlex": "15–40 min",
+      "title": "Get to North Station",
+      "summary": "Morning subway to the Fitchburg Line, with time to buy a weekend pass.",
+      "description": "North Station is the terminal for the Fitchburg Line. Give yourself time for the ticket window or the mTicket app. The $10 Weekend Pass covers unlimited Commuter Rail trips on Saturday and Sunday, all lines and zones, which is the right ticket for a round trip to Wachusett. A one-way Zone 10 fare is $13.25, so the weekend pass is the cheaper round trip.",
+      "transit": {
+        "mode": "Subway",
+        "from": "Back Bay or Park Street",
+        "to": "North Station",
+        "line": "Orange Line from Back Bay, or Green Line toward Government Center",
+        "minutes": "About 10–20 minutes depending on where you slept",
+        "fare": "$2.40 subway, then the rail pass",
+        "note": "Weekend pass: mTicket, the North Station ticket window, or on board with cash or card."
+      },
+      "sources": [
+        {
+          "label": "Weekend pass: $10, all zones",
+          "url": "https://www.mbta.com/fares/10-commuter-rail-weekend-and-holiday-passes"
+        },
+        {
+          "label": "Zone 10 one-way is $13.25",
+          "url": "https://www.mbta.com/fares/commuter-rail-fares/zones"
+        }
+      ]
+    },
+    {
+      "id": "fitchburg-out",
+      "kind": "transit",
+      "day": "sunday",
+      "start": "8:00 a.m.",
+      "end": "9:40 a.m.",
+      "durationMinutes": 100,
+      "durationFlex": "95–120 min",
+      "title": "Fitchburg Line to Wachusett",
+      "summary": "The long train leg. Confirm the Sunday outbound before you leave the hotel.",
+      "description": "Harvard Forest publishes a blunt note: there is no public transportation to the forest. The closest Commuter Rail stop they list is Wachusett, still a drive from the pond. The ride from North Station to Wachusett takes about an hour and thirty-five minutes on the published timetable. Weekend outbound trips are sparse. On the Sunday, September 27, 2026 board, the return trains that still get you downtown before 3 p.m. leave Wachusett at 10:25 a.m. (North Station 12:01 p.m.) and 12:25 p.m. (North Station 2:01 p.m.). Choose a morning outbound that lands you at Wachusett with enough time to ride to the pond and walk. Re-check that outbound on mbta.com for your date; do not assume a weekday frequency.",
+      "transit": {
+        "mode": "Commuter Rail",
+        "from": "North Station",
+        "to": "Wachusett",
+        "line": "Fitchburg Line outbound",
+        "minutes": "About 1 hour 35 minutes",
+        "fare": "$10 Weekend Pass (or $13.25 one-way Zone 10)",
+        "note": "Bicycles are allowed on the weekend trips shown for September 27, 2026. Wachusett has no fare machines; buy before you go or on board."
+      },
+      "sources": [
+        {
+          "label": "No public transit to Harvard Forest; Wachusett is the rail point they name",
+          "url": "https://harvardforest.fas.harvard.edu/directions/public-transportation"
+        },
+        {
+          "label": "Fitchburg Line timetable",
+          "url": "https://www.mbta.com/schedules/CR-Fitchburg/timetable"
+        },
+        {
+          "label": "Wachusett station, 55 Authority Drive, Fitchburg",
+          "url": "https://www.mbta.com/stops/place-FR-3338"
+        }
+      ]
+    },
+    {
+      "id": "rideshare-pond",
+      "kind": "transit",
+      "day": "sunday",
+      "start": "9:40 a.m.",
+      "end": "10:05 a.m.",
+      "durationMinutes": 25,
+      "durationFlex": "15–30 min",
+      "title": "Rideshare to Harvard Pond",
+      "summary": "The gap the train cannot close. About 15–25 minutes from Wachusett station.",
+      "description": "Harvard Forest asks drivers to use the Route 122 pull-offs at the east and west edges of Harvard Pond for the Tom Swamp tract, not a generic “Harvard Forest” pin. The Fisher Museum pin (324 North Main Street, Petersham) is a different tract. Schedule the return car before you start walking, and leave the pond in time for the 12:25 p.m. inbound. Cell service in the woods can be thin.",
+      "transit": {
+        "mode": "Rideshare or taxi",
+        "from": "Wachusett Station",
+        "to": "Harvard Pond trailhead, Route 122, Petersham",
+        "line": "Not MBTA",
+        "minutes": "About 15–25 minutes",
+        "fare": "A short suburban rideshare. Price it in the app that morning.",
+        "note": "Ask to be dropped at the Route 122 parking for Harvard Pond / Tom Swamp. Do not block any gate."
+      },
+      "sources": [
+        {
+          "label": "Parking just off Route 122 at Harvard Pond",
+          "url": "https://harvardforest.fas.harvard.edu/visit/trails-recreation/"
+        },
+        {
+          "label": "Harvard Forest is 70 miles west of the Cambridge campus",
+          "url": "https://harvardforest.fas.harvard.edu/visit/directions-to-harvard-forest/"
+        }
+      ]
+    },
+    {
+      "id": "harvard-pond",
+      "kind": "place",
+      "day": "sunday",
+      "start": "10:05 a.m.",
+      "end": "11:35 a.m.",
+      "durationMinutes": 90,
+      "durationFlex": "40–100 min",
+      "title": "Harvard Pond",
+      "neighborhood": "Petersham",
+      "address": "Tom Swamp tract, Harvard Forest, off Route 122, Petersham, MA",
+      "kicker": "The far stop",
+      "summary": "A quiet pond loop in Harvard Forest. Keep it short enough to make the 12:25 p.m. train.",
+      "description": "Harvard Pond sits in the Tom Swamp tract of Harvard Forest, a 3,850-acre research woods in Petersham. A public trail circles the pond. AllTrails lists the Harvard Pond Loop at 2.8 miles, easy, about 53 minutes for people who keep moving; with stops at the water, plan closer to 75. A shoreline out-and-back is the right version if the rideshare ran late. Trails are open year-round even when the Fisher Museum is not. The museum, on the other side of town at 324 North Main Street, is a separate stop and will not fit this return train. Hunting is not allowed around the pond. Stay on the trail and leave research markers alone.",
+      "highlights": [
+        "2.8-mile pond loop, or a shorter look from the Route 122 edge",
+        "Water lilies, wetland trees, and very few people",
+        "Hard stop: be rolling back toward Wachusett by about 11:40 a.m."
+      ],
+      "hours": "Trails are open year-round, dawn to dusk in practice. No camping, no fires. Dogs must be leashed or under voice command.",
+      "visit": "About 45 minutes for a short look, or 60–90 minutes for the full loop. This window is 90 minutes including photos.",
+      "nearby": [
+        "Fisher Museum dioramas, only if you skip the early return train",
+        "Petersham town center, a few minutes by car",
+        "No cafe at the trailhead — bring water"
+      ],
+      "mapUrl": "https://maps.google.com/?q=Harvard+Pond+Petersham+MA",
+      "sources": [
+        {
+          "label": "Harvard Forest trails, parking, and rules",
+          "url": "https://harvardforest.fas.harvard.edu/visit/trails-recreation/"
+        },
+        {
+          "label": "Harvard Pond Loop, 2.8 miles, about 53 minutes",
+          "url": "https://www.alltrails.com/trail/us/massachusetts/harvard-pond-loop"
+        },
+        {
+          "label": "Fisher Museum hours, if you ever make it a separate trip",
+          "url": "https://harvardforest.fas.harvard.edu/visit/fisher-museum/"
+        }
+      ]
+    },
+    {
+      "id": "rideshare-back",
+      "kind": "transit",
+      "day": "sunday",
+      "start": "11:40 a.m.",
+      "end": "12:10 p.m.",
+      "durationMinutes": 30,
+      "durationFlex": "20–35 min",
+      "title": "Rideshare back to Wachusett",
+      "summary": "Pre-booked pickup. The 12:25 p.m. inbound is the train that still ends the day on time.",
+      "description": "Leave the trailhead with a cushion. The Sunday, September 27, 2026 timetable shows a 12:25 p.m. departure from Wachusett arriving at North Station at 2:01 p.m. The next train is 2:25 p.m., which arrives at 4:01 p.m. and misses the 3 p.m. end of this plan. If you miss 12:25, the day simply runs long.",
+      "transit": {
+        "mode": "Rideshare or taxi",
+        "from": "Harvard Pond, Route 122",
+        "to": "Wachusett Station",
+        "line": "Not MBTA",
+        "minutes": "About 15–25 minutes, plus a few minutes to find the platform",
+        "fare": "Price it in the app; book before the hike",
+        "note": "Target a 12:05 p.m. arrival at the station so you are on the platform for 12:25."
+      },
+      "sources": [
+        {
+          "label": "Fitchburg Line timetable",
+          "url": "https://www.mbta.com/schedules/CR-Fitchburg/timetable"
+        }
+      ]
+    },
+    {
+      "id": "fitchburg-back",
+      "kind": "transit",
+      "day": "sunday",
+      "start": "12:25 p.m.",
+      "end": "2:01 p.m.",
+      "durationMinutes": 96,
+      "durationFlex": "96 min on this trip",
+      "title": "Fitchburg Line back to North Station",
+      "summary": "12:25 p.m. from Wachusett, 2:01 p.m. at North Station, on the September 27, 2026 Sunday timetable.",
+      "description": "This is the return that fits the window. The same Sunday board also has a 10:25 a.m. inbound arriving at noon, which only works if you barely leave the station. Buy nothing at Wachusett if you already have the weekend pass. The platform is high-level. From North Station you are a few minutes from the Greenway, the North End, or the Orange Line back to Back Bay.",
+      "transit": {
+        "mode": "Commuter Rail",
+        "from": "Wachusett",
+        "to": "North Station",
+        "line": "Fitchburg Line inbound, 12:25 p.m. departure",
+        "minutes": "1 hour 36 minutes (12:25 p.m. to 2:01 p.m.)",
+        "fare": "Covered by the $10 Weekend Pass",
+        "note": "Sampled from the MBTA Sunday, September 27, 2026 timetable. Confirm the day you travel."
+      },
+      "sources": [
+        {
+          "label": "Fitchburg Line timetable",
+          "url": "https://www.mbta.com/schedules/CR-Fitchburg/timetable"
+        },
+        {
+          "label": "$10 Weekend Pass",
+          "url": "https://www.mbta.com/fares/commuter-rail-fares"
+        }
+      ]
+    },
+    {
+      "id": "buffer",
+      "kind": "place",
+      "day": "sunday",
+      "start": "2:05 p.m.",
+      "end": "3:00 p.m.",
+      "durationMinutes": 55,
+      "durationFlex": "30–55 min",
+      "title": "Back in the city",
+      "neighborhood": "North Station",
+      "address": "North Station, 135 Causeway Street, Boston",
+      "kicker": "Until 3 p.m.",
+      "summary": "A soft landing. Coffee, the Rose Kennedy Greenway, or the Orange Line to wherever you leave from.",
+      "description": "The itinerary ends at 3 p.m., with the train already in. Use the last hour loosely: walk the Greenway toward the North End, or ride the Orange Line one stop and be done. If the pond morning ran long and you are on the later train, this block is the one that absorbs it.",
+      "highlights": [
+        "You are downtown with almost an hour to spare",
+        "Orange Line and Green Line both connect here",
+        "TD Garden is the building you are standing under"
+      ],
+      "hours": "The station follows the train schedule.",
+      "visit": "Whatever is left before 3 p.m.",
+      "nearby": [
+        "Rose Kennedy Greenway",
+        "North End",
+        "Orange Line to Back Bay"
+      ],
+      "mapUrl": "https://maps.google.com/?q=North+Station+Boston+MA",
+      "sources": [
+        {
+          "label": "MBTA North Station and Fitchburg Line",
+          "url": "https://www.mbta.com/schedules/CR-Fitchburg/timetable"
+        }
+      ]
+    }
+  ]
+}

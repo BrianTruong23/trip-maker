@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Twenty-six hours in Boston</title>
+  <meta name="description" content="A loose Saturday 1 p.m. to Sunday 3 p.m. Boston itinerary: Trident, Newbury Street, Blank Street, Boston Common, Harvard Square, HEYTEA, and Harvard Pond.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Outfit:wght@380;500;640&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="mast">
+    <p class="eyebrow">MBTA weekend · flexible durations</p>
+    <h1 id="title">Twenty-six hours in Boston</h1>
+    <p class="lede" id="lede"></p>
+    <dl class="facts" id="facts"></dl>
+  </header>
+
+  <nav class="toolbar" aria-label="Itinerary filters">
+    <div class="days" id="day-filters" role="tablist"></div>
+    <button type="button" class="text-btn" id="toggle-all" aria-pressed="false">Expand all</button>
+  </nav>
+
+  <main id="timeline" class="timeline" aria-live="polite"></main>
+
+  <footer class="colophon">
+    <p id="premise"></p>
+    <p class="fine">Hours, fares, and train times were checked on September 25, 2026. Confirm the Fitchburg Line and shop hours the day you go. Sources sit inside each card.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
