@@ -7,8 +7,8 @@
     "hours": 26
   },
   "researched": "2026-09-25",
-  "premise": "Back Bay on foot Saturday afternoon, Cambridge and Allston by subway and bus Saturday evening, then Harvard Pond on Sunday. The pond is in Petersham, about 70 miles west of Boston. The train ends at Wachusett; the last miles are a rideshare.",
-  "flexibility": "Clock times are a suggested order, not a reservation. Each stop has a flexible duration. Swap Harvard Square into Sunday daylight and shorten the pond walk if you would rather see the square while shops are open.",
+  "premise": "Back Bay on foot Saturday afternoon, Cambridge and Allston by subway and bus Saturday evening, then the night at Maverick Suites on Newbury Street. Sunday is based at The Arcadian Hotel in Brookline.",
+  "flexibility": "Clock times are a suggested order. Sort the list by time, or by walking distance from Maverick Suites on Saturday and The Arcadian Hotel on Sunday.",
   "days": [
     {
       "id": "saturday",
@@ -20,7 +20,7 @@
       "id": "sunday",
       "label": "Sunday",
       "dateHint": "Morning until 3 p.m.",
-      "summary": "Fitchburg Line to Wachusett, a short rideshare to Harvard Pond, and a train back before 3."
+      "summary": "Based at The Arcadian Hotel in Brookline. Harvard Pond is no longer on this trip."
     }
   ],
   "items": [
@@ -60,7 +60,11 @@
           "label": "OpenTable: daily 8 a.m.–10 p.m. and weekend rush notes",
           "url": "https://www.opentable.com/r/trident-booksellers-and-cafe-boston-2"
         }
-      ]
+      ],
+      "location": {
+        "lat": 42.3482427,
+        "lng": -71.08661
+      }
     },
     {
       "id": "walk-newbury",
@@ -125,7 +129,11 @@
           "label": "Visit length and east-to-west shift",
           "url": "https://www.nomadotravel.app/en/attractions/newbury-street"
         }
-      ]
+      ],
+      "location": {
+        "lat": 42.3523684,
+        "lng": -71.0722732
+      }
     },
     {
       "id": "walk-blank",
@@ -190,7 +198,11 @@
           "label": "Harvard Square alternate: 1380 Massachusetts Avenue",
           "url": "https://www.blankstreet.com/en-US/locations/boston/91-massachusetts-and-dunster-st"
         }
-      ]
+      ],
+      "location": {
+        "lat": 42.3500754,
+        "lng": -71.0784141
+      }
     },
     {
       "id": "walk-common",
@@ -263,7 +275,11 @@
           "label": "Swan Boats 2026 season, April 18–September 7",
           "url": "https://swanboats.com/plan-your-visit/"
         }
-      ]
+      ],
+      "location": {
+        "lat": 42.35504,
+        "lng": -71.066071
+      }
     },
     {
       "id": "red-line-harvard",
@@ -336,7 +352,11 @@
           "label": "About two hours, or half a day with the Yard and museums",
           "url": "https://www.nomadotravel.app/en/attractions/harvard-square"
         }
-      ]
+      ],
+      "location": {
+        "lat": 42.3734734,
+        "lng": -71.1189431
+      }
     },
     {
       "id": "bus-66",
@@ -401,7 +421,11 @@
           "label": "Hours: daily 11:30 a.m.–10 p.m., takeaway-style shop",
           "url": "https://www.restaurantji.com/ma/allston/heytea-allston-/"
         }
-      ]
+      ],
+      "location": {
+        "lat": 42.3515612,
+        "lng": -71.1314766
+      }
     },
     {
       "id": "green-line-home",
@@ -411,17 +435,17 @@
       "end": "10:40 p.m.",
       "durationMinutes": 30,
       "durationFlex": "25–40 min",
-      "title": "Green Line B back toward Back Bay",
-      "summary": "Harvard Ave inbound to Hynes, Copley, or Park Street, depending on where you are sleeping.",
-      "description": "Board the Green Line B inbound (toward Government Center). Hynes is the stop for the Mass Ave end of Newbury. Copley and Arlington cover the garden end. Park Street returns you to the Common. If you are staying near North Station for tomorrow’s train, stay on through Park Street and change, or ride to Government Center and walk. An Orange Line ride from Back Bay station to North Station in the morning is simpler if your hotel is in Back Bay.",
+      "title": "Green Line B to Maverick Suites",
+      "summary": "Harvard Ave inbound to Copley, then a one-block walk to 245 Newbury Street.",
+      "description": "Board the Green Line B inbound toward Government Center and get off at Copley. Maverick Suites is one block north, at 245 Newbury Street.",
       "transit": {
         "mode": "Subway",
         "from": "Harvard Avenue",
-        "to": "Hynes, Copley, Arlington, or Park Street",
+        "to": "Copley, then walk to 245 Newbury Street",
         "line": "Green Line B inbound",
         "minutes": "About 20–30 minutes to the Back Bay stops",
         "fare": "$2.40",
-        "note": "Last trains leave the downtown end around 12:40 a.m. Confirm the night schedule in the MBTA app."
+        "note": "Copley is the closest stop to Maverick Suites. Hynes is the stop if you are coming from the Mass Ave end of Newbury earlier in the day."
       },
       "sources": [
         {
@@ -438,13 +462,13 @@
       "end": "7:15 a.m.",
       "durationMinutes": 510,
       "durationFlex": "As long as you need",
-      "title": "Overnight",
-      "neighborhood": "Wherever you are staying",
-      "summary": "The middle of the 26 hours. Sleep, then aim for North Station in the morning.",
-      "description": "Nothing is scheduled here on purpose. If tomorrow’s pond trip is the plan, stay somewhere with an easy morning path to North Station. From Back Bay station the Orange Line runs straight to North Station in about 10 minutes. From Park Street, walk or take the Green Line north to Government Center and continue to North Station.",
+      "title": "Night at Maverick Suites",
+      "neighborhood": "Back Bay",
+      "summary": "Saturday night at Maverick Suites, on Newbury between Exeter and Fairfield.",
+      "description": "End the night at Maverick Suites, 245 Newbury Street. From HEYTEA, take the Green Line B inbound and get off at Copley, then walk one block north to Newbury. This is the point Saturday distances are measured from.",
       "highlights": [
-        "Orange Line Back Bay to North Station is the clean morning move",
-        "Buy the $10 Commuter Rail weekend pass before you board"
+        "245 Newbury Street, a short walk from Copley",
+        "Saturday distances in the list use this address"
       ],
       "hours": "Off the clock.",
       "visit": "Roughly eight hours, and it can shrink if you want a slower Saturday night.",
@@ -454,238 +478,38 @@
           "label": "$10 weekend pass, all zones, Saturday and Sunday",
           "url": "https://www.mbta.com/fares/10-commuter-rail-weekend-and-holiday-passes"
         }
-      ]
-    },
-    {
-      "id": "to-north-station",
-      "kind": "transit",
-      "day": "sunday",
-      "start": "7:20 a.m.",
-      "end": "7:50 a.m.",
-      "durationMinutes": 30,
-      "durationFlex": "15–40 min",
-      "title": "Get to North Station",
-      "summary": "Morning subway to the Fitchburg Line, with time to buy a weekend pass.",
-      "description": "North Station is the terminal for the Fitchburg Line. Give yourself time for the ticket window or the mTicket app. The $10 Weekend Pass covers unlimited Commuter Rail trips on Saturday and Sunday, all lines and zones, which is the right ticket for a round trip to Wachusett. A one-way Zone 10 fare is $13.25, so the weekend pass is the cheaper round trip.",
-      "transit": {
-        "mode": "Subway",
-        "from": "Back Bay or Park Street",
-        "to": "North Station",
-        "line": "Orange Line from Back Bay, or Green Line toward Government Center",
-        "minutes": "About 10–20 minutes depending on where you slept",
-        "fare": "$2.40 subway, then the rail pass",
-        "note": "Weekend pass: mTicket, the North Station ticket window, or on board with cash or card."
-      },
-      "sources": [
-        {
-          "label": "Weekend pass: $10, all zones",
-          "url": "https://www.mbta.com/fares/10-commuter-rail-weekend-and-holiday-passes"
-        },
-        {
-          "label": "Zone 10 one-way is $13.25",
-          "url": "https://www.mbta.com/fares/commuter-rail-fares/zones"
-        }
-      ]
-    },
-    {
-      "id": "fitchburg-out",
-      "kind": "transit",
-      "day": "sunday",
-      "start": "8:00 a.m.",
-      "end": "9:40 a.m.",
-      "durationMinutes": 100,
-      "durationFlex": "95–120 min",
-      "title": "Fitchburg Line to Wachusett",
-      "summary": "The long train leg. Confirm the Sunday outbound before you leave the hotel.",
-      "description": "Harvard Forest publishes a blunt note: there is no public transportation to the forest. The closest Commuter Rail stop they list is Wachusett, still a drive from the pond. The ride from North Station to Wachusett takes about an hour and thirty-five minutes on the published timetable. Weekend outbound trips are sparse. On the Sunday, September 27, 2026 board, the return trains that still get you downtown before 3 p.m. leave Wachusett at 10:25 a.m. (North Station 12:01 p.m.) and 12:25 p.m. (North Station 2:01 p.m.). Choose a morning outbound that lands you at Wachusett with enough time to ride to the pond and walk. Re-check that outbound on mbta.com for your date; do not assume a weekday frequency.",
-      "transit": {
-        "mode": "Commuter Rail",
-        "from": "North Station",
-        "to": "Wachusett",
-        "line": "Fitchburg Line outbound",
-        "minutes": "About 1 hour 35 minutes",
-        "fare": "$10 Weekend Pass (or $13.25 one-way Zone 10)",
-        "note": "Bicycles are allowed on the weekend trips shown for September 27, 2026. Wachusett has no fare machines; buy before you go or on board."
-      },
-      "sources": [
-        {
-          "label": "No public transit to Harvard Forest; Wachusett is the rail point they name",
-          "url": "https://harvardforest.fas.harvard.edu/directions/public-transportation"
-        },
-        {
-          "label": "Fitchburg Line timetable",
-          "url": "https://www.mbta.com/schedules/CR-Fitchburg/timetable"
-        },
-        {
-          "label": "Wachusett station, 55 Authority Drive, Fitchburg",
-          "url": "https://www.mbta.com/stops/place-FR-3338"
-        }
-      ]
-    },
-    {
-      "id": "rideshare-pond",
-      "kind": "transit",
-      "day": "sunday",
-      "start": "9:40 a.m.",
-      "end": "10:05 a.m.",
-      "durationMinutes": 25,
-      "durationFlex": "15–30 min",
-      "title": "Rideshare to Harvard Pond",
-      "summary": "The gap the train cannot close. About 15–25 minutes from Wachusett station.",
-      "description": "Harvard Forest asks drivers to use the Route 122 pull-offs at the east and west edges of Harvard Pond for the Tom Swamp tract, not a generic “Harvard Forest” pin. The Fisher Museum pin (324 North Main Street, Petersham) is a different tract. Schedule the return car before you start walking, and leave the pond in time for the 12:25 p.m. inbound. Cell service in the woods can be thin.",
-      "transit": {
-        "mode": "Rideshare or taxi",
-        "from": "Wachusett Station",
-        "to": "Harvard Pond trailhead, Route 122, Petersham",
-        "line": "Not MBTA",
-        "minutes": "About 15–25 minutes",
-        "fare": "A short suburban rideshare. Price it in the app that morning.",
-        "note": "Ask to be dropped at the Route 122 parking for Harvard Pond / Tom Swamp. Do not block any gate."
-      },
-      "sources": [
-        {
-          "label": "Parking just off Route 122 at Harvard Pond",
-          "url": "https://harvardforest.fas.harvard.edu/visit/trails-recreation/"
-        },
-        {
-          "label": "Harvard Forest is 70 miles west of the Cambridge campus",
-          "url": "https://harvardforest.fas.harvard.edu/visit/directions-to-harvard-forest/"
-        }
-      ]
-    },
-    {
-      "id": "harvard-pond",
-      "kind": "place",
-      "day": "sunday",
-      "start": "10:05 a.m.",
-      "end": "11:35 a.m.",
-      "durationMinutes": 90,
-      "durationFlex": "40–100 min",
-      "title": "Harvard Pond",
-      "neighborhood": "Petersham",
-      "address": "Tom Swamp tract, Harvard Forest, off Route 122, Petersham, MA",
-      "kicker": "The far stop",
-      "summary": "A quiet pond loop in Harvard Forest. Keep it short enough to make the 12:25 p.m. train.",
-      "description": "Harvard Pond sits in the Tom Swamp tract of Harvard Forest, a 3,850-acre research woods in Petersham. A public trail circles the pond. AllTrails lists the Harvard Pond Loop at 2.8 miles, easy, about 53 minutes for people who keep moving; with stops at the water, plan closer to 75. A shoreline out-and-back is the right version if the rideshare ran late. Trails are open year-round even when the Fisher Museum is not. The museum, on the other side of town at 324 North Main Street, is a separate stop and will not fit this return train. Hunting is not allowed around the pond. Stay on the trail and leave research markers alone.",
-      "highlights": [
-        "2.8-mile pond loop, or a shorter look from the Route 122 edge",
-        "Water lilies, wetland trees, and very few people",
-        "Hard stop: be rolling back toward Wachusett by about 11:40 a.m."
       ],
-      "hours": "Trails are open year-round, dawn to dusk in practice. No camping, no fires. Dogs must be leashed or under voice command.",
-      "visit": "About 45 minutes for a short look, or 60–90 minutes for the full loop. This window is 90 minutes including photos.",
-      "nearby": [
-        "Fisher Museum dioramas, only if you skip the early return train",
-        "Petersham town center, a few minutes by car",
-        "No cafe at the trailhead — bring water"
-      ],
-      "mapUrl": "https://maps.google.com/?q=Harvard+Pond+Petersham+MA",
-      "sources": [
-        {
-          "label": "Harvard Forest trails, parking, and rules",
-          "url": "https://harvardforest.fas.harvard.edu/visit/trails-recreation/"
-        },
-        {
-          "label": "Harvard Pond Loop, 2.8 miles, about 53 minutes",
-          "url": "https://www.alltrails.com/trail/us/massachusetts/harvard-pond-loop"
-        },
-        {
-          "label": "Fisher Museum hours, if you ever make it a separate trip",
-          "url": "https://harvardforest.fas.harvard.edu/visit/fisher-museum/"
-        }
-      ]
-    },
-    {
-      "id": "rideshare-back",
-      "kind": "transit",
-      "day": "sunday",
-      "start": "11:40 a.m.",
-      "end": "12:10 p.m.",
-      "durationMinutes": 30,
-      "durationFlex": "20–35 min",
-      "title": "Rideshare back to Wachusett",
-      "summary": "Pre-booked pickup. The 12:25 p.m. inbound is the train that still ends the day on time.",
-      "description": "Leave the trailhead with a cushion. The Sunday, September 27, 2026 timetable shows a 12:25 p.m. departure from Wachusett arriving at North Station at 2:01 p.m. The next train is 2:25 p.m., which arrives at 4:01 p.m. and misses the 3 p.m. end of this plan. If you miss 12:25, the day simply runs long.",
-      "transit": {
-        "mode": "Rideshare or taxi",
-        "from": "Harvard Pond, Route 122",
-        "to": "Wachusett Station",
-        "line": "Not MBTA",
-        "minutes": "About 15–25 minutes, plus a few minutes to find the platform",
-        "fare": "Price it in the app; book before the hike",
-        "note": "Target a 12:05 p.m. arrival at the station so you are on the platform for 12:25."
+      "address": "245 Newbury Street, Boston, MA 02116",
+      "location": {
+        "lat": 42.3497706,
+        "lng": -71.0826178
       },
-      "sources": [
-        {
-          "label": "Fitchburg Line timetable",
-          "url": "https://www.mbta.com/schedules/CR-Fitchburg/timetable"
-        }
-      ]
+      "mapUrl": "https://maps.google.com/?q=245+Newbury+Street+Boston+MA"
+    }
+  ],
+  "hotels": [
+    {
+      "id": "maverick",
+      "name": "Maverick Suites",
+      "day": "saturday",
+      "when": "Saturday night",
+      "address": "245 Newbury Street, Boston, MA 02116",
+      "location": {
+        "lat": 42.3497706,
+        "lng": -71.0826178
+      }
     },
     {
-      "id": "fitchburg-back",
-      "kind": "transit",
+      "id": "arcadian",
+      "name": "The Arcadian Hotel",
       "day": "sunday",
-      "start": "12:25 p.m.",
-      "end": "2:01 p.m.",
-      "durationMinutes": 96,
-      "durationFlex": "96 min on this trip",
-      "title": "Fitchburg Line back to North Station",
-      "summary": "12:25 p.m. from Wachusett, 2:01 p.m. at North Station, on the September 27, 2026 Sunday timetable.",
-      "description": "This is the return that fits the window. The same Sunday board also has a 10:25 a.m. inbound arriving at noon, which only works if you barely leave the station. Buy nothing at Wachusett if you already have the weekend pass. The platform is high-level. From North Station you are a few minutes from the Greenway, the North End, or the Orange Line back to Back Bay.",
-      "transit": {
-        "mode": "Commuter Rail",
-        "from": "Wachusett",
-        "to": "North Station",
-        "line": "Fitchburg Line inbound, 12:25 p.m. departure",
-        "minutes": "1 hour 36 minutes (12:25 p.m. to 2:01 p.m.)",
-        "fare": "Covered by the $10 Weekend Pass",
-        "note": "Sampled from the MBTA Sunday, September 27, 2026 timetable. Confirm the day you travel."
-      },
-      "sources": [
-        {
-          "label": "Fitchburg Line timetable",
-          "url": "https://www.mbta.com/schedules/CR-Fitchburg/timetable"
-        },
-        {
-          "label": "$10 Weekend Pass",
-          "url": "https://www.mbta.com/fares/commuter-rail-fares"
-        }
-      ]
-    },
-    {
-      "id": "buffer",
-      "kind": "place",
-      "day": "sunday",
-      "start": "2:05 p.m.",
-      "end": "3:00 p.m.",
-      "durationMinutes": 55,
-      "durationFlex": "30–55 min",
-      "title": "Back in the city",
-      "neighborhood": "North Station",
-      "address": "North Station, 135 Causeway Street, Boston",
-      "kicker": "Until 3 p.m.",
-      "summary": "A soft landing. Coffee, the Rose Kennedy Greenway, or the Orange Line to wherever you leave from.",
-      "description": "The itinerary ends at 3 p.m., with the train already in. Use the last hour loosely: walk the Greenway toward the North End, or ride the Orange Line one stop and be done. If the pond morning ran long and you are on the later train, this block is the one that absorbs it.",
-      "highlights": [
-        "You are downtown with almost an hour to spare",
-        "Orange Line and Green Line both connect here",
-        "TD Garden is the building you are standing under"
-      ],
-      "hours": "The station follows the train schedule.",
-      "visit": "Whatever is left before 3 p.m.",
-      "nearby": [
-        "Rose Kennedy Greenway",
-        "North End",
-        "Orange Line to Back Bay"
-      ],
-      "mapUrl": "https://maps.google.com/?q=North+Station+Boston+MA",
-      "sources": [
-        {
-          "label": "MBTA North Station and Fitchburg Line",
-          "url": "https://www.mbta.com/schedules/CR-Fitchburg/timetable"
-        }
-      ]
+      "when": "Sunday",
+      "address": "1200 Beacon Street, Brookline, MA 02446",
+      "note": "Used for “Arcadia Hotel.” The Arcadian Hotel is the hotel by that name in Brookline.",
+      "location": {
+        "lat": 42.344016,
+        "lng": -71.11604
+      }
     }
   ]
 }
